@@ -1,0 +1,41 @@
+															---------------------BÀI 1---------------------
+
+1.Giới thiệu về Redux
+ 	- Tổng quan:
+		+ Redux là một thư viện JavaScript có tác dụng tạo ra một lớp quản lý mọi trạng thái của ứng dụng
+		+ Redux giúp các ứng dụng bạn viết có thể hoạt động một cách nhất quán và có thể hoạt động trong nhiều môi trường khác như client ,sever,native,...
+		
+	- Cách thức hoạt động của redux:	
+		+ Hoạt động dựa trên 3 thành phần chính là : Actions,Store,Reducers
+						= Action : hay còn hiểu đơn giản là các events, là bước hoạt động đầu tiên của Redux là cách tải dữ liệu từ ứng dụng đến Redux Store							
+						= Reducers: sau khi các dữ liệu được Actions sẽ chuyển về Reducers.Đây là nơi state được lưu giữ dưới dạng đối tượng và giúp xác định sự thay đổi trạng thái ứng dụng 
+								sao cho đáp ứng Action được tới Store.Reducer sẽ làm nhiệm vụ định hướng sự thay đổi của các state khi mỗi Actions có phản hồi và phản hồi được gửi đến reducer.
+						= Store : Store là nơi lưu trạng thái của ứng dụng chỉ có duy nhất một Store trong 1 chương trình
+	- Nguyên lý vận hành của Redux
+		+ Sử dụng một nguồn dữ liệu tin cậy duy nhất: Redux sẽ sử lý mọi nguồn dữ liệu và tập hợp thành một nguồn duy nhất
+		+ Xây dựng trạng thái chỉ được phép đọc
+						= cách duy hất để thay đổi state một ứng dụng là phát ra một action ngoài ra không được thay đổi trực tiếp
+		+ Chỉ thay đổi một cách thuần túy:
+						= Để biến đổi State bới Action, người ta dùng các pure function được gọi là Reducer
+	
+2.Es6 Generator
+ - Tổng quan:
+	+ Là 1 function trong javascript có khả năng pause execution (dừng việc thực thi 1 function) và resume execution(tiếp tục thực thi funciton) khi điều kiện được kích hoạt gọi hàm (Next) 	
+
+
+	
+					---------------------BÀI 2---------------------
+						--Các khái niệm cần biết trong Redux Saga--
+
+-Efect: là 1 javascript obj để báo cho saga middleware biết phải làm gì
+-Task : là một process chạy dưới background
+-Blocking/Non-Blocking call: 
+		+ Blocking: thực hiện theo tuần tự kết thúc thì mới chạy tiếp
+		+ Non-Blocking call : chạy liên tục không cần đợi câu lệch trước kết thúc //https://redux-saga.js.org/docs/api#blocking--non-blocking
+-Watcher/Worker:
+		+ Watcher:luôn theo dõi hành động ủa acction khi nhận được action sẽ tự động thực hiện
+		+ Worker : xử lý hành động và chấm dứt
+			-----------Bài 3-----------
+	--Setup project dùng Typescript, Redux Toolkit và Create React App --
+Câu lệnh bulid ; npx create-react-app my-app --template redux-typescript
+
